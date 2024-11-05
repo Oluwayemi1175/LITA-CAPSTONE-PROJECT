@@ -104,6 +104,115 @@ Below is the pivot tables used to summarizes;
 
 The lines of queries used for the Exploratory Data Analysis in the PowerHouse Hub SalesData include;
 
+- To select all the table in the PowerHouse Hub SalesData
+
 ```SQL
 Select * from [dbo].[SalesData_Project]
 ```
+
+![SQLsalesdata](https://github.com/user-attachments/assets/6960e806-31a6-4cf6-9777-c2b02ce1f680)
+
+- Total sales by product category: Retrieve the total sales for each product category
+
+```SQL
+select Product, Sum (Quantity*UnitPrice) as TotalSales
+from [dbo].[SalesData_Project]
+group by Product
+order by TotalSales desc
+```
+
+![SQL salesdata 2](https://github.com/user-attachments/assets/9c044a46-6af2-4798-a8c8-6c7c32e3c85a)
+
+- Sales transactions by region: Find the number of sales transactions in each region
+
+```SQL
+select Region, Count (OrderID) as No_of_Sales_Transaction
+from [dbo].[SalesData_Project]
+group by Region
+order by No_of_Sales_Transaction asc
+```
+
+![SQLsalesdata 3](https://github.com/user-attachments/assets/b7db3a59-126b-4ebe-904f-056a514e7df8)
+
+- Highest selling product: Find the highest selling product by total sales value
+
+```SQL
+select top 1 Product, Sum (Quantity*UnitPrice) 
+as Highest_Selling_Product
+from [dbo].[SalesData_Project]
+group by Product
+```
+
+![SQLsalesdata 4](https://github.com/user-attachments/assets/efccb84e-36a7-4639-a411-4e0a94f85a3d)
+
+- Total revenue per product: Calculate total revenue per product
+
+```SQL
+select OrderID, Sum (Quantity*UnitPrice) as Total_Revenue
+from [dbo].[SalesData_Project]
+group by OrderID
+order by Total_Revenue desc
+```
+
+![SQLsalesdata 5](https://github.com/user-attachments/assets/4edcc3f2-74eb-44ec-95b4-146bdd7b7cde)
+
+- Find the total monthly sales by the current year
+
+```SQL
+Select 
+  Case Month (OrderDate)
+    When 1 then 'January'
+	When 2 then 'February'
+	When 3 then 'March'
+	When 4 then 'April'
+	When 5 then 'May'
+	When 6 then 'June'
+	When 7 then 'July'
+	When 8 then 'August'
+	When 9 then 'September'
+	When 10 then 'October'
+	When 11 then 'November'
+	When 12 then 'December'
+  End as Month, sum (Quantity*UnitPrice) as Monthly_Total_Sales
+from [dbo].[SalesData_Project]
+where
+year(OrderDate)=year(getdate())
+group by Month(OrderDate)
+order by Month(OrderDate)
+```
+
+![SQLsalesdata 6](https://github.com/user-attachments/assets/605981a5-def2-4310-a4c9-f5821b2271c4)
+
+- Top 5 customer by purchase Amount: Find the 5 top customer by total purchase amount
+
+```SQL
+select top 5 Customer_Id, Sum (Quantity*UnitPrice) as Total_Purchase_Amount
+from [dbo].[SalesData_Project]
+group by Customer_Id
+order by Total_Purchase_Amount desc
+```
+
+![SQLsalesdata 7](https://github.com/user-attachments/assets/d61d2c73-256b-4798-bc4c-d6e4e90ad313)
+
+- Sales contribution by region: Calculate the percentage of total sales contributed by each region
+
+```SQL
+select Region, sum (Quantity*UnitPrice) as Total_Sales,
+sum (Quantity*UnitPrice)*100.0/(select sum (Quantity*UnitPrice) from[dbo].[SalesData_Project]) 
+as Percentage_of_Total_Sales
+from [dbo].[SalesData_Project]
+group by Region
+order by Percentage_of_Total_Sales desc
+```
+
+![SQLsalesdata 8](https://github.com/user-attachments/assets/f9a2ee46-aa22-40e9-a54c-2b16846bc9e2)
+
+- Products with no sales in last quarter: Identify products with no sales in the last quarter
+```SQL
+select distinct product from [dbo].[SalesData_Project]
+where product Not In (select product from [dbo].[SalesData_Project]
+where OrderDate >= DateAdd (quarter, -1, GetDate()) and 
+OrderDate < GetDate())
+```
+
+![SQLsalesdata 9](https://github.com/user-attachments/assets/fd070692-9d18-4838-9cc5-908205beb88d)
