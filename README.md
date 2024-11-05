@@ -55,3 +55,30 @@ EDA is used to investigate the data set and summarize the main characteristics s
 6. Find the top 5 customers by total purchase amount. 
 7. Calculate the percentage of total sales contributed by each region. 
 8. Identify products with no sales in the last quarter.
+
+### For PowerHouse Hub CustomerData
+1. Retrieve the total number of customers from each region. 
+2. Find the most popular subscription type by the number of customers. 
+3. Find customers who canceled their subscriptions within 6 months. 
+4. Calculate the average subscription duration for all customers. 
+5. Find customers with subscriptions longer than 12 months. 
+6. Calculate total revenue by subscription type. 
+7. Find the top 3 regions by subscription cancellations. 
+8. Find the total number of active and canceled subscriptions.
+
+### Data Analysis
+This is where we include some basic lines of code/queries or even some of the DAX expressions used during the analysis;
+
+### PowerHouse Hub SalesData 
+Below is the pivot tables used to summarizes; 
+- Total sales by product
+- Total sales by region
+- Total sales by month
+- Average of total sales by product
+- Average of total sales by region
+- Percentage of total sales by product
+- Percentage of total sales by region
+- Total quantity by product
+- Total quantity by region
+- Percentage of total quantity by product
+- Percentage of total quantity by region
