@@ -101,3 +101,9 @@ Below is the pivot tables used to summarizes;
 ![PCustomerData](https://github.com/user-attachments/assets/25ec21a2-f19b-487a-92ad-ccc44fe98bab)
 
 ![PCustomerData 2](https://github.com/user-attachments/assets/50acba79-0f1c-4547-9227-fc2e9fa312e9)
+
+The lines of queries used for the Exploratory Data Analysis in the PowerHouse Hub SalesData include;
+
+```SQL
+Select * from [dbo].[SalesData_Project]
+```
