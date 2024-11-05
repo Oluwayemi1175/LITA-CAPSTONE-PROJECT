@@ -88,3 +88,16 @@ Below is the pivot tables used to summarizes;
 ![PSalesData 2](https://github.com/user-attachments/assets/d1f743e4-e708-43de-bfb5-f6c6793fdd02)
 
 ![PSalesData 3](https://github.com/user-attachments/assets/3f594369-e1e2-41c7-889a-7a571773c636)
+
+### PowerHouse Hub CustomerData
+Below is the pivot tables used to summarizes;
+- Count of CustomerID by SubscriptionType
+- Average of SubscriptionDuration by SubscriptionType
+- SubscriptionType by Revenue
+- Region by Sum of Revenue
+- SubscriptionType by Sum of Renewed
+- Identification of Cancellation and Renewed
+
+![PCustomerData](https://github.com/user-attachments/assets/25ec21a2-f19b-487a-92ad-ccc44fe98bab)
+
+![PCustomerData 2](https://github.com/user-attachments/assets/50acba79-0f1c-4547-9227-fc2e9fa312e9)
