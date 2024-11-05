@@ -82,3 +82,9 @@ Below is the pivot tables used to summarizes;
 - Total quantity by region
 - Percentage of total quantity by product
 - Percentage of total quantity by region
+
+![PSalesData](https://github.com/user-attachments/assets/6b0078fc-8263-4242-b5d2-b05ef2a4a783)
+
+![PSalesData 2](https://github.com/user-attachments/assets/d1f743e4-e708-43de-bfb5-f6c6793fdd02)
+
+![PSalesData 3](https://github.com/user-attachments/assets/3f594369-e1e2-41c7-889a-7a571773c636)
