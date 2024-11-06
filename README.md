@@ -3,7 +3,7 @@
 ### Project Overview
 The aim of this project is to analyze the SalesData and CustomerData for PowerHouse Hub in identifying the trends, customer behaviours, sales and regional performance. By examining the trends using the required tools across the product demand, regional sales distribution and subscription patterns, we gain valuable insights into the key factors that influence the sales productivity and customer interest. The key insights gotten from this analysis will help the Hub to make data-driven decisions for a strategic growths, improved customer satisfaction, and optimized sales performance. The processing involves the collection of the data, loading the data, cleaning and analyzing it using tools like Excel, Structured Query Language, and PowerBI. 
 
-### Field Descriptions For PowerHouse Hub SalesData
+### Field Descriptions for PowerHouse Hub SalesData
 - OrderID: A unique identifier for each sales order.
 - CustomerID: A unique identifier for each customer.
 - Product: Each product purchased by the customer within the Hub.
@@ -13,7 +13,7 @@ The aim of this project is to analyze the SalesData and CustomerData for PowerHo
 - UnitPrice: The price per unit of each product.
 - Total Sales: The total sales generated for each order placed calculated as Quantity * UnitPrice.
 
-### Field Descriptions For PowerHouse Hub CustomerData
+### Field Descriptions for PowerHouse Hub CustomerData
 - CustomerID: A unique identifier for each customer.
 - CustomerName: The name of each customer.
 - Region: The location associating with the customer.
@@ -66,10 +66,22 @@ EDA is used to investigate the data set and summarize the main characteristics s
 7. Find the top 3 regions by subscription cancellations. 
 8. Find the total number of active and canceled subscriptions.
 
+### Basic Statistics for PowerHouse Hub SalesData
+- Total sales: 2 Million
+- Total number of transactions: 9,921
+- Number of product: 6
+
+### Basic Statistics for PowerHouse Hub CustomerData
+- Sum of revenue: 68 Million
+- Number of renewed subscription: 18612
+- Number of cancelled subscription: 151715
+- Total number of customers: 33787
+- Number of subscription type: 3
+
 ### Data Analysis
 This is where we include some basic lines of code/queries or even some of the DAX expressions used during the analysis;
 
-### PowerHouse Hub SalesData 
+### Pivot Tables for PowerHouse Hub SalesData 
 Below is the pivot tables used to summarizes; 
 - Total sales by product
 - Total sales by region
@@ -89,7 +101,7 @@ Below is the pivot tables used to summarizes;
 
 ![PSalesData 3](https://github.com/user-attachments/assets/3f594369-e1e2-41c7-889a-7a571773c636)
 
-### PowerHouse Hub CustomerData
+### Pivot Tables for PowerHouse Hub CustomerData
 Below is the pivot tables used to summarizes;
 - Count of CustomerID by SubscriptionType
 - Average of SubscriptionDuration by SubscriptionType
@@ -102,6 +114,7 @@ Below is the pivot tables used to summarizes;
 
 ![PCustomerData 2](https://github.com/user-attachments/assets/50acba79-0f1c-4547-9227-fc2e9fa312e9)
 
+### SQL Queries for PowerHouse Hub SalesData
 The lines of queries used for the Exploratory Data Analysis in the PowerHouse Hub SalesData include;
 
 - To select all the table in the PowerHouse Hub SalesData
@@ -216,3 +229,113 @@ OrderDate < GetDate())
 ```
 
 ![SQLsalesdata 9](https://github.com/user-attachments/assets/fd070692-9d18-4838-9cc5-908205beb88d)
+
+### SQL Queries for PowerHouse Hub CustomerData
+The lines of queries used for the Exploratory Data Analysis in the PowerHouse Hub CustomerData include;
+
+- To select all the table in the PowerHouse Hub CustomerData
+
+```SQL
+Select * from [dbo].[CustomerData_Project]
+```
+
+![SQLcustomerdata](https://github.com/user-attachments/assets/620a6af8-aaee-4bfc-90ff-e2e2279b480d)
+
+- Total customer by region: Retrieve the total number of customers from each region
+
+```SQL
+select Region, count (CustomerID) as Total_Customers
+from [dbo].[CustomerData_Project]
+group by Region
+order by Region asc
+```
+
+![SQLcustomerdata 2](https://github.com/user-attachments/assets/941149bd-7bac-4212-9424-b7db3cf7c1cd)
+
+- Most popular subscription type: Find the most popular subscription type by the number of customers
+
+```SQL
+select top 1 SubscriptionType, count (CustomerID) 
+as Total_Customers
+from [dbo].[CustomerData_Project]
+group by SubscriptionType
+order by Total_Customers desc
+```
+
+![sqlcustomerdata 3](https://github.com/user-attachments/assets/2da9fcdf-3695-4397-ab94-7614488b8ba1)
+
+- Canceled within 6 months: Find customers who canceled their subscription within 6 months
+
+```SQL
+update [dbo].[CustomerData_Project]
+set Canceled = 0
+   where Canceled = 'True'
+update [dbo].[CustomerData_Project]
+set Canceled = 1
+   where Canceled = 'False'
+
+select count (CustomerID) as Canceled_Subscription
+from [dbo].[CustomerData_Project]
+where Canceled = 0
+and SubscriptionEnd>=dateadd (month, -6, getdate())
+```
+
+![sqlcustomerdata 4](https://github.com/user-attachments/assets/747e715e-934a-4f61-80af-6a9c9eac9c89)
+
+- Average subscription duration: Calculate the average subscription duration for all customers
+
+```SQL
+select AVG(datediff(day, SubscriptionStart, SubscriptionEnd))
+as Average_Subscription_Duration
+from [dbo].[CustomerData_Project]
+```
+
+![sqlcustomerdata 5](https://github.com/user-attachments/assets/78864667-1870-4684-82a0-ca84c0051489)
+
+- Customer with subscription longer than 12 months: Find customer with subscription longer than 12 months
+
+```SQL
+select count (CustomerID) as Subscription_For_12Months
+from [dbo].[CustomerData_Project]
+where SubscriptionStart<=dateadd(month, -12, getdate())
+```
+
+![sqlcustomerdata 6](https://github.com/user-attachments/assets/8345dccf-d611-40d3-aaa2-6ca793b76f25)
+
+- Total revenue by subscription type: Calculate total revenue by subscription type
+
+```SQL
+select SubscriptionType, sum (Revenue) as Total_Revenue
+from [dbo].[CustomerData_Project]
+group by SubscriptionType
+order by Total_Revenue desc
+```
+
+![sqlcustomerdata 7](https://github.com/user-attachments/assets/64c0474b-0e57-4539-9484-0e3073f2cd53)
+
+- Top 3 regions by subscription cancellations: Find the top 3 regions by subscription cancellations
+
+```SQL
+select top 3 Region, count (CustomerID) 
+as Subscription_Cancellation
+from [dbo].[CustomerData_Project]
+where Canceled = 0
+group by Region
+order by Subscription_Cancellation
+```
+
+![sqlcustomerdata 8](https://github.com/user-attachments/assets/13f28f73-f5ab-48de-a2d7-b8095be9b21b)
+
+- Total active and canceled subscriptions: Find the total number of active and canceled subscriptions
+
+```SQL
+select sum (case when canceled = 0 then 1 else 0 end) 
+as Total_Canceled,
+sum (case when canceled = 1 then 1 else 0 end) 
+as Total_Active
+from [dbo].[CustomerData_Project]
+```
+
+![sqlcustomerdata 9](https://github.com/user-attachments/assets/22f49396-79c7-4df1-8c8b-5336800e2fe6)
+
+### Data Visualization
