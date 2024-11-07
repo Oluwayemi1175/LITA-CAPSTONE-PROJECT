@@ -341,3 +341,14 @@ from [dbo].[CustomerData_Project]
 ![sqlcustomerdata 9](https://github.com/user-attachments/assets/22f49396-79c7-4df1-8c8b-5336800e2fe6)
 
 ### Data Visualization
+Data visualization for PowerHouse Hub SalesData
+
+![SalesData Visualization](https://github.com/user-attachments/assets/27a9c28a-9c0a-4e00-8cac-9e0dc90d0039)
+
+Data visualization for PowerHouse Hub CustomerData
+
+![CustomerData Visualization](https://github.com/user-attachments/assets/39d857ea-052b-491f-8d6f-4f9150880752)
+
+### My Results
+
+### For PowerHouse Hub SalesData
