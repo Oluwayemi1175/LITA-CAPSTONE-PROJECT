@@ -352,3 +352,4 @@ Data visualization for PowerHouse Hub CustomerData
 ### My Results
 
 ### For PowerHouse Hub SalesData
+The key insights generated from the PowerHouse Hub SalesData revealed that
