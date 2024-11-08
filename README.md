@@ -2,6 +2,7 @@
 
  ### Project Title: Sales Transaction Data and Customer Subscription Data For PowerHouse Hub
  [Project Overview](#project-overview)
+ 
  [Field Descriptions for PowerHouse Hub SalesData](#Field-Descriptions-for-powerHouse-hub-salesdata)
  
 
