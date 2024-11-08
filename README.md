@@ -352,4 +352,4 @@ Data visualization for PowerHouse Hub CustomerData
 ### My Results
 
 ### For PowerHouse Hub SalesData
-The key insights generated from the PowerHouse Hub SalesData revealed that
+The key insights generated from the PowerHouse Hub SalesData revealed the best selling product in a region, season, quarter or particular month. The total sales or revenue of the SalesData shows that the Hub has a good sales of figure from the total transaction of 9921 while the Average Order Value on how much the customer spends per transaction. Out of the 6 products sold in the Hub, shoes has the highest selling rate with 29.19% while socks has the lowest selling rate with 8.6%, and South having the highest sales volume in the region while West has the least sales volume. February's highest monthly sales trend may be due to seasonal events, such as the much-anticipated time for lovers to celebrate their love, as the month has been known as the Month of Love. This results in customers likely to purchase gifts for their loved ones and the Hub running a special promotion or sale for the celebration. 
