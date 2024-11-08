@@ -1,6 +1,7 @@
  # LITA-CAPSTONE-PROJECT
 
  ### Project Title: Sales Transaction Data and Customer Subscription Data For PowerHouse Hub
+ [Project Overview](#Project-Overview)
 
 ### Project Overview
 The aim of this project is to analyze the SalesData and CustomerData for PowerHouse Hub in identifying the trends, customer behaviours, sales and regional performance. By examining the trends using the required tools across the product demand, regional sales distribution and subscription patterns, we gain valuable insights into the key factors that influence the sales productivity and customer interest. The key insights gotten from this analysis will help the Hub to make data-driven decisions for a strategic growths, improved customer satisfaction, and optimized sales performance. The processing involves the collection of the data, loading the data, cleaning and analyzing it using tools like Excel, Structured Query Language, and PowerBI. 
@@ -351,13 +352,24 @@ Data visualization for PowerHouse Hub CustomerData
 
 ### My Results
 
-### For PowerHouse Hub SalesData
-The key insights generated from the PowerHouse Hub SalesData revealed the best selling product in a region, season, quarter or particular month. The total sales or revenue of the SalesData shows that the Hub has a good sales of figure from the total transaction of 9,921 while the Average Order Value on how much the customer spends per transaction. Out of the 6 products sold in the Hub, shoes has the highest selling rate with 29.19% while socks has the lowest selling rate with 8.6%, and South having the highest sales volume in the region while West has the least sales volume. February's highest monthly sales trend may be due to seasonal events, such as the much-anticipated time for lovers to celebrate their love, as the month has been known as the Month of Love. This results in customers likely to purchase gifts for their loved ones and the Hub running a special promotion or sale for the celebration. 
+### PowerHouse Hub SalesData
+The key insights generated from the PowerHouse Hub SalesData revealed the best-selling product in a region, season, quarter, or particular month. The total sales or revenue of the SalesData shows that the Hub has a good sales figure from the total transaction of 9,921 while the Average Order Value on how much the customer spends per transaction. Out of the 6 products sold in the Hub, shoes have the highest selling rate at 29.19% while socks have the lowest selling rate at 8.6%, and South has the highest sales volume in the region while West has the least sales volume. February's highest monthly sales trend may be due to seasonal events, such as the much-anticipated time for lovers to celebrate their love, as the month has been known as the Month of Love. This results in customers likely to purchase gifts for their loved ones and the Hub running a special promotion or sale for the celebration.  
 
-### For PowerHouse Hub CustomerData
-From the PowerHouse Hub CustomerData analysis, a total revenue of 68 Million was generated, while the Hub has an average revenue of 2K and 33,787 subscribers from 4 regions. The Hub has three types of subscription which are basic, standard, and premium, the basic has the highest subscription type with 50% of the total number of customers subscribed. Out of 33,787 subscribers, 18,612 renewed their subscriptions having the highest of subscribers for the basic with 64%, and 18% for standard and premium respectively. 
+### PowerHouse Hub CustomerData
+From the PowerHouse Hub CustomerData analysis, a total revenue of 68 Million was generated, while the Hub has an average revenue of 2K and 33,787 subscribers from 4 regions. The Hub has three types of subscription which are Basic, Standard, and Premium, the basic has the highest subscription type with 50% of the total number of customers subscribed. Out of 33,787 subscribers, 18,612 renewed their subscriptions having the highest of subscribers for the basic with 64%, and 18% for standard and premium respectively. 
 The region (East, South, North, and West) subscription pattern gave an impressive outcome, with little difference from the sum of revenue generated. This can be a result of well-structured marketing strategies. Also, it can be discovered from the analysis that, there is no cancellation from the subscribers from the Eastern region. It can also be associated with good marketing strategies.
-The basic subscription type happens to meet the needs and expectations of customers, indicating a strong satisfaction with the plan.
+The basic subscription type happens to meet the needs and expectations of customers, indicating strong satisfaction with the plan.
 
 ### Recommendation
-### For PowerHouse Hub SalesData
+
+### PowerHouse Hub SalesData
+- With a high-selling product, there can be leverage on its popularity by offering more discounts or limited offers to increase rapid sales. There can be an expansion of the product line by introducing new styles to capture the customer's interest while with the low product, a customer survey can be conducted or the use of customer feedback to detect the reason behind the low sales. While that is done, promotion tactics can be introduced to increase visibility and encourage purchases.
+- Increase product awareness in regions having low sales to boost and double the marketing efforts to sustain the South's high sales.
+- Implement targeting seasonal campaigns by identifying profitable quarters or months in a year.
+- Encourage loyal customers who spent above a certain amount or a regular customer.
+
+### PowerHouse Hub CustomerData
+- Addition of limited-time features for the Basic plan subscribers to encourage new sign-ups.
+- The promotion tactics or strategies used for the Basic plan to get more subscribers can be used in enhancing other subscription types.
+- Implement strategies such as customer surveys or feedback for customer retention.
+- Develop a promotion or campaign to encourage the Basic subscribers to upgrade to Standard or Premium by highlighting additional services or offering free trials for some days, weeks, or months.
