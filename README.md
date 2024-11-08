@@ -3,13 +3,56 @@
  ### Project Title: Sales Transaction Data and Customer Subscription Data For PowerHouse Hub
  [Project Overview](#project-overview)
  
- [Field Descriptions for PowerHouse Hub SalesData](#Field-Descriptions-for-powerHouse-hub-salesdata)
+ [Field Descriptions for PowerHouse Hub SalesData](#Field-Descriptions-for-powerhouse-hub-salesdata)
+
+ [Field Descriptions for PowerHouse Hub CustomerData](#field-descriptions-for-powerhouse-hub-customerdata)
  
+[Data Source](#data-source)
+
+[Tools Used](#tools-used)
+
+[Data Cleaning and Preparation](#data-cleaning-and-preparation)
+
+[Exploratory Data Analysis](#exploratory-data-analysis)
+
+[For PowerHouse Hub SalesData](#for-powerhouse-hub-salesdata)
+
+[For PowerHouse Hub CustomerData](#for-powerhouse-hub-customerdata)
+
+[Basic Statistics for PowerHouse Hub SalesData](#basic-statistics-for-powerhouse-hub-salesdata)
+
+[Basic Statistics for PowerHouse Hub CustomerData](#basic-statistics-for-powerhouse-hub-customerdata)
+
+[Data Analysis](#data-analysis)
+
+[Pivot Tables for PowerHouse Hub SalesData](#pivot-tables-for-powerhouse-hub-salesdata)
+
+[Pivot Tables for PowerHouse Hub CustomerData](#pivot-tables-for-powerhouse-hub-customerdata)
+
+[SQL Queries for PowerHouse Hub SalesData](#SQL-queries-for-powerhouse-hub-salesdata)
+
+[SQL Queries for PowerHouse Hub CustomerData](#SQL-queries-for-powerhouse-hub-customerdata)
+
+[Data Visualization](#data-visualization)
+
+[My Results](#my-results)
+
+[PowerHouse Hub SalesData](#powerhouse-hub-salesdata)
+
+[PowerHouse Hub CustomerData](#powerhouse-hub-customerdata)
+
+[Recommendations](#Recommendations)
+
+[PowerHouse Hub SalesData](#powerhouse-hub-salesdata)
+
+[PowerHouse Hub CustomerData](#powerhouse-hub-customerdata)
 
 ### Project Overview
+---
 The aim of this project is to analyze the SalesData and CustomerData for PowerHouse Hub in identifying the trends, customer behaviours, sales and regional performance. By examining the trends using the required tools across the product demand, regional sales distribution and subscription patterns, we gain valuable insights into the key factors that influence the sales productivity and customer interest. The key insights gotten from this analysis will help the Hub to make data-driven decisions for a strategic growths, improved customer satisfaction, and optimized sales performance. The processing involves the collection of the data, loading the data, cleaning and analyzing it using tools like Excel, Structured Query Language, and PowerBI. 
 
 ### Field Descriptions for PowerHouse Hub SalesData
+---
 - OrderID: A unique identifier for each sales order.
 - CustomerID: A unique identifier for each customer.
 - Product: Each product purchased by the customer within the Hub.
@@ -20,6 +63,7 @@ The aim of this project is to analyze the SalesData and CustomerData for PowerHo
 - Total Sales: The total sales generated for each order placed calculated as Quantity * UnitPrice.
 
 ### Field Descriptions for PowerHouse Hub CustomerData
+---
 - CustomerID: A unique identifier for each customer.
 - CustomerName: The name of each customer.
 - Region: The location associating with the customer.
@@ -32,9 +76,11 @@ The aim of this project is to analyze the SalesData and CustomerData for PowerHo
 - Renewed: The binary indicator that shows whether customer renewed their subscription.
 
 ### Data Source
+---
 The main data source used for this analysis are 'SalesData.csv' and 'CustomerData.csv' which can be freely downloadeded from online sites such as Kaggle, FRED or any other data repository site.
 
 ### Tools Used
+---
 The following tools are used the analyze the data for the Hub;
 - Mircrosoft Excel [Download Here](https://www.microsoft.com).
 For data cleaning and analysis
@@ -44,15 +90,18 @@ For querying databases
 For visualization
 
 ### Data Cleaning and Preparation
+---
 In the initial phase of the Data cleaning and preparations, the following actions was performed;
 - Data loading and inspection
 - Handling missing variables 
 - Data cleaning and formatting
 
 ### Exploratory Data Analysis
+---
 EDA is used to investigate the data set and summarize the main characteristics such as;
 
 ### For PowerHouse Hub SalesData
+---
 1. Retrieve the total sales for each product category. 
 2. Find the number of sales transactions in each region. 
 3. Find the highest-selling product by total sales value. 
@@ -63,6 +112,7 @@ EDA is used to investigate the data set and summarize the main characteristics s
 8. Identify products with no sales in the last quarter.
 
 ### For PowerHouse Hub CustomerData
+---
 1. Retrieve the total number of customers from each region. 
 2. Find the most popular subscription type by the number of customers. 
 3. Find customers who canceled their subscriptions within 6 months. 
@@ -73,11 +123,13 @@ EDA is used to investigate the data set and summarize the main characteristics s
 8. Find the total number of active and canceled subscriptions.
 
 ### Basic Statistics for PowerHouse Hub SalesData
+---
 - Total sales: 2 Million
 - Total number of transactions: 9,921
 - Number of product: 6
 
 ### Basic Statistics for PowerHouse Hub CustomerData
+---
 - Sum of revenue: 68 Million
 - Number of renewed subscription: 18612
 - Number of cancelled subscription: 151715
@@ -85,9 +137,11 @@ EDA is used to investigate the data set and summarize the main characteristics s
 - Number of subscription type: 3
 
 ### Data Analysis
+---
 This is where we include some basic lines of code/queries or even some of the DAX expressions used during the analysis;
 
-### Pivot Tables for PowerHouse Hub SalesData 
+### Pivot Tables for PowerHouse Hub SalesData
+---
 Below is the pivot tables used to summarizes; 
 - Total sales by product
 - Total sales by region
@@ -108,6 +162,7 @@ Below is the pivot tables used to summarizes;
 ![PSalesData 3](https://github.com/user-attachments/assets/3f594369-e1e2-41c7-889a-7a571773c636)
 
 ### Pivot Tables for PowerHouse Hub CustomerData
+---
 Below is the pivot tables used to summarizes;
 - Count of CustomerID by SubscriptionType
 - Average of SubscriptionDuration by SubscriptionType
@@ -121,6 +176,7 @@ Below is the pivot tables used to summarizes;
 ![PCustomerData 2](https://github.com/user-attachments/assets/50acba79-0f1c-4547-9227-fc2e9fa312e9)
 
 ### SQL Queries for PowerHouse Hub SalesData
+---
 The lines of queries used for the Exploratory Data Analysis in the PowerHouse Hub SalesData include;
 
 - To select all the table in the PowerHouse Hub SalesData
@@ -237,6 +293,7 @@ OrderDate < GetDate())
 ![SQLsalesdata 9](https://github.com/user-attachments/assets/fd070692-9d18-4838-9cc5-908205beb88d)
 
 ### SQL Queries for PowerHouse Hub CustomerData
+---
 The lines of queries used for the Exploratory Data Analysis in the PowerHouse Hub CustomerData include;
 
 - To select all the table in the PowerHouse Hub CustomerData
@@ -345,6 +402,7 @@ from [dbo].[CustomerData_Project]
 ![sqlcustomerdata 9](https://github.com/user-attachments/assets/22f49396-79c7-4df1-8c8b-5336800e2fe6)
 
 ### Data Visualization
+---
 Data visualization for PowerHouse Hub SalesData
 
 ![SalesData Visualization](https://github.com/user-attachments/assets/27a9c28a-9c0a-4e00-8cac-9e0dc90d0039)
@@ -356,22 +414,26 @@ Data visualization for PowerHouse Hub CustomerData
 ### My Results
 
 ### PowerHouse Hub SalesData
+---
 The key insights generated from the PowerHouse Hub SalesData revealed the best-selling product in a region, season, quarter, or particular month. The total sales or revenue of the SalesData shows that the Hub has a good sales figure from the total transaction of 9,921 while the Average Order Value on how much the customer spends per transaction. Out of the 6 products sold in the Hub, shoes have the highest selling rate at 29.19% while socks have the lowest selling rate at 8.6%, and South has the highest sales volume in the region while West has the least sales volume. February's highest monthly sales trend may be due to seasonal events, such as the much-anticipated time for lovers to celebrate their love, as the month has been known as the Month of Love. This results in customers likely to purchase gifts for their loved ones and the Hub running a special promotion or sale for the celebration.  
 
 ### PowerHouse Hub CustomerData
+---
 From the PowerHouse Hub CustomerData analysis, a total revenue of 68 Million was generated, while the Hub has an average revenue of 2K and 33,787 subscribers from 4 regions. The Hub has three types of subscription which are Basic, Standard, and Premium, the basic has the highest subscription type with 50% of the total number of customers subscribed. Out of 33,787 subscribers, 18,612 renewed their subscriptions having the highest of subscribers for the basic with 64%, and 18% for standard and premium respectively. 
 The region (East, South, North, and West) subscription pattern gave an impressive outcome, with little difference from the sum of revenue generated. This can be a result of well-structured marketing strategies. Also, it can be discovered from the analysis that, there is no cancellation from the subscribers from the Eastern region. It can also be associated with good marketing strategies.
 The basic subscription type happens to meet the needs and expectations of customers, indicating strong satisfaction with the plan.
 
-### Recommendation
+### Recommendations
 
 ### PowerHouse Hub SalesData
+---
 - With a high-selling product, there can be leverage on its popularity by offering more discounts or limited offers to increase rapid sales. There can be an expansion of the product line by introducing new styles to capture the customer's interest while with the low product, a customer survey can be conducted or the use of customer feedback to detect the reason behind the low sales. While that is done, promotion tactics can be introduced to increase visibility and encourage purchases.
 - Increase product awareness in regions having low sales to boost and double the marketing efforts to sustain the South's high sales.
 - Implement targeting seasonal campaigns by identifying profitable quarters or months in a year.
 - Encourage loyal customers who spent above a certain amount or a regular customer.
 
 ### PowerHouse Hub CustomerData
+---
 - Addition of limited-time features for the Basic plan subscribers to encourage new sign-ups.
 - The promotion tactics or strategies used for the Basic plan to get more subscribers can be used in enhancing other subscription types.
 - Implement strategies such as customer surveys or feedback for customer retention.
